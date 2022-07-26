@@ -1,0 +1,353 @@
+/* ================================================================================= */
+/*
+* Overall info of colors and fonts
+*
+* @Colors:
+*		- #fff  - White
+*		- #323232  - Dark color same as black
+*		- #F7C463 - Accent color
+*		- #FFF7EB - Background color
+
+
+* @Fonts:
+*		- 'EB Garamond', serif: 400 (Regular) - Heading font
+*		- 'Poppins', sans-serif: 200 (Extra light) - Paragraph font
+*		- 'Poppins' 500 (Medium) - Sub headings font
+*/
+/* ================================================================================= */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #323232;
+  border-radius: 20px;
+  border: 0;
+}
+
+
+
+
+
+
+h1,
+h2,
+h4 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 45px;
+  width: 60%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: left;
+}
+
+p {
+  color: #323232;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+
+
+button {
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #F7C463;
+  border: 0;
+  border-radius: 10rem;
+  padding: 0.5rem 2rem;
+  filter: drop-shadow(0px -1px 9px rgba(0, 0, 0, 0.25));
+  transition: 0.2s all ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #deac4f;
+}
+
+
+a {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  color: #323232;
+  text-decoration: none;
+  transition: 0.2s color ease-in-out;
+}
+
+a:hover {
+  color: #F7C463;
+}
+
+
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+
+li:hover,
+li:hover a,
+li:hover span {
+  cursor: pointer;
+  color: #F7C463;
+}
+
+li span {
+  transition: 0.2s color ease-in-out;
+}
+
+
+
+body {
+  margin-top: 6rem;
+  background-color: #FFF7EB;
+}
+
+
+header {
+  width: 100%;
+  height: 90vh;
+}
+
+main {
+  padding: 4rem 0;
+}
+
+
+section {
+  margin: 10rem 0;
+  padding: 2rem 0;
+}
+
+footer {
+  width: 100vw;
+  background-color: #000000;
+}
+
+
+
+
+
+.wrapper {
+  padding: 2rem 4rem;
+  padding-top: 0;
+}
+
+
+.top-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1rem 4rem;
+  background: #FFF7EB;
+  z-index: 99;
+}
+
+.top-nav nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav nav a {
+  font-size: 16px;
+}
+
+.top-nav .logo {
+  margin: 0 5rem;
+}
+
+.top-nav .logo img {
+  width: 65px;
+  border-radius: 20rem;
+}
+
+
+
+
+
+section .title {
+  display: flex;
+}
+
+section .title.flex--row h2 {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+section .title.flex--column h2 {
+  margin-bottom: 2rem;
+}
+
+
+section .paragraph {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+}
+
+section .paragraph h3 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.065em;
+  color: #F7C463;
+  margin-bottom: 0.5rem;
+}
+
+
+.left-content,
+.right-content {
+  width: 45%;
+}
+
+
+/* ===================================================== */
+/* Custom classes designs */
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #F7C463;
+  color: #323232;
+  border-color: transparent;
+  border-radius: 0.5rem;
+  transition: 0.2s background ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #d5a956;
+}
+
+
+li.active a {
+  color: #F7C463;
+  text-decoration: underline;
+}
+
+
+
+.flex--column {
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+
+/* ===================================================== */
+
+
+
+
+
+
+
+
+
+/* =============================================================================================================== */
+/* For tablets */
+@media (min-width: 768px) {
+  .btn--main {
+    width: 85%;
+  }
+
+  .btn--refresh {
+    width: 15%;
+  }
+
+
+  .form__body .title h2 {
+    font-size: 26px;
+  }
+
+  .form__container {
+    width: 70%;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+  }
+
+
+  input::placeholder,
+  input[type="date" i] {
+    font-size: 13px;
+  }
+
+  form .text__input input {
+    font-size: 13px;
+  }
+
+  form .text__input label,
+  form .radio__input label {
+    font-size: 9px;
+  }
+
+  form .text__input.flex,
+  form .radio__input.flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  form .text__input.flex .text__contents,
+  form .radio__input.flex .text__contents {
+    width: 48%;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+/* =============================================================================================================== */
+/* for desktop and laptops */
+@media (min-width: 992px) {
+  .form__container {
+    width: 40%;
+  }
+}
+
+
+
+
+/* =============================================================================================================== */
+/* for 4K tv */
+@media (min-width: 1500px) {
+  .form__container {
+    width: 25%;
+  }
+}
