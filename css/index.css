@@ -144,6 +144,24 @@
 	justify-content: space-between;
 }
 
+.sect-gallery .left-content .title h2 {
+	margin-bottom: 0;
+}
+
+.sect-gallery .right-content {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	width: unset;
+}
+.sect-gallery .right-content a {
+	font-size: 20px;
+	color: #F7C463;
+	border-bottom: 2px solid #F7C463;
+	padding: 0 3px;
+}
+
+
 
 .sect-contact {
 	display: flex;

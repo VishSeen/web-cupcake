@@ -7,6 +7,7 @@
 *		- #323232  - Dark color same as black
 *		- #F7C463 - Accent color
 *		- #FFF7EB - Background color
+*		- #FEE7C3 - Footer Background color
 
 
 * @Fonts:
@@ -47,7 +48,8 @@
 
 h1,
 h2,
-h4 {
+h4,
+h5 {
   font-family: 'EB Garamond', serif;
   font-weight: 400;
 }
@@ -76,9 +78,8 @@ button {
   font-weight: 500;
   background-color: #F7C463;
   border: 0;
-  border-radius: 10rem;
   padding: 0.5rem 2rem;
-  filter: drop-shadow(0px -1px 9px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
   transition: 0.2s all ease-in-out;
 }
 
@@ -139,6 +140,7 @@ header {
 
 main {
   padding: 4rem 0;
+  padding-bottom: 0;
 }
 
 
@@ -148,7 +150,7 @@ section {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   background-color: #000000;
 }
 
@@ -175,26 +177,31 @@ footer {
   background: #FFF7EB;
   z-index: 99;
 }
-
 .top-nav nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
 .top-nav nav a {
   font-size: 16px;
 }
-
 .top-nav .logo {
   margin: 0 5rem;
 }
-
 .top-nav .logo img {
   width: 65px;
   border-radius: 20rem;
 }
 
+.top-nav .left-nav ul:first-child li {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.top-nav .right-nav ul:last-child li {
+  padding-right: 0;
+  margin-right: 0;
+}
 
 
 
@@ -202,12 +209,10 @@ footer {
 section .title {
   display: flex;
 }
-
 section .title.flex--row h2 {
   margin-left: 1rem;
   margin-bottom: 2rem;
 }
-
 section .title.flex--column h2 {
   margin-bottom: 2rem;
 }
@@ -218,7 +223,6 @@ section .paragraph {
   line-height: 21px;
   letter-spacing: 0.015em;
 }
-
 section .paragraph h3 {
   font-size: 12px;
   font-weight: 500;
@@ -235,6 +239,58 @@ section .paragraph h3 {
 }
 
 
+
+
+
+.footer-main {
+  background-color: #FEE7C3;
+  display: flex;
+  justify-content: flex-start;
+  padding: 3rem 4rem;
+  height: 275px;
+  font-family: 'EB Garamond', serif;
+    font-weight: 400;
+}
+.footer-main div {
+  width: 25%;
+}
+.footer-main div h5 {
+  font-size: 25px;
+  line-height: 33px;
+  margin-bottom: 10px;
+}
+.footer-main div ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.footer-main div ul li {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 3px;
+  margin-left: 0;
+}
+.footer-main div ul li a,
+.footer-main div ul li span,
+.footer-main div ul li {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'EB Garamond', serif;
+}
+
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: #323232;
+  background-color: #C0A376;
+}
+.footer-copyright p {
+  font-weight: 300;
+  font-size: 11px;
+}
 
 
 
