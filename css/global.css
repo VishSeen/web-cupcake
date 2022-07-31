@@ -177,17 +177,21 @@ footer {
   background: #FFF7EB;
   z-index: 99;
 }
+
 .top-nav nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
 .top-nav nav a {
   font-size: 16px;
 }
+
 .top-nav .logo {
   margin: 0 5rem;
 }
+
 .top-nav .logo img {
   width: 65px;
   border-radius: 20rem;
@@ -196,6 +200,11 @@ footer {
 .top-nav .left-nav ul:first-child li {
   padding-left: 0;
   margin-left: 0;
+  opacity: 0;
+}
+
+.top-nav .left-nav ul:first-child li span:hover {
+  cursor: unset;
 }
 
 .top-nav .right-nav ul:last-child li {
@@ -204,15 +213,30 @@ footer {
 }
 
 
+.top-nav .right-nav .cart-container {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  width: 195px;
+  height: 235px;
+  background-color: #fff;
+}
+
+.mobile-nav {
+  display: none;
+}
+
 
 
 section .title {
   display: flex;
 }
+
 section .title.flex--row h2 {
   margin-left: 1rem;
   margin-bottom: 2rem;
 }
+
 section .title.flex--column h2 {
   margin-bottom: 2rem;
 }
@@ -223,6 +247,7 @@ section .paragraph {
   line-height: 21px;
   letter-spacing: 0.015em;
 }
+
 section .paragraph h3 {
   font-size: 12px;
   font-weight: 500;
@@ -249,27 +274,32 @@ section .paragraph h3 {
   padding: 3rem 4rem;
   height: 275px;
   font-family: 'EB Garamond', serif;
-    font-weight: 400;
+  font-weight: 400;
 }
+
 .footer-main div {
   width: 25%;
 }
+
 .footer-main div h5 {
   font-size: 25px;
   line-height: 33px;
   margin-bottom: 10px;
 }
+
 .footer-main div ul {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .footer-main div ul li {
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 3px;
   margin-left: 0;
 }
+
 .footer-main div ul li a,
 .footer-main div ul li span,
 .footer-main div ul li {
@@ -287,6 +317,7 @@ section .paragraph h3 {
   color: #323232;
   background-color: #C0A376;
 }
+
 .footer-copyright p {
   font-weight: 300;
   font-size: 11px;
@@ -299,8 +330,13 @@ section .paragraph h3 {
 .fade-out {
   opacity: 0;
 }
+
 .fade-in {
   opacity: 1;
+}
+
+.hide {
+  display: none;
 }
 
 
@@ -312,6 +348,7 @@ section .paragraph h3 {
   border-radius: 0.5rem;
   transition: 0.2s background ease-in-out;
 }
+
 .btn:hover {
   cursor: pointer;
   background-color: #d5a956;
@@ -347,73 +384,136 @@ li.active a {
 
 /* =============================================================================================================== */
 /* For tablets */
-@media (min-width: 768px) {
-  .btn--main {
-    width: 85%;
+@media (min-width: 768px) {}
+
+
+
+
+/* =============================================================================================================== */
+/* for mobile and Down */
+@media (max-width: 446px) {
+  .hide-for-mobile {
+    display: none;
   }
 
-  .btn--refresh {
-    width: 15%;
+  .big-title h1 {
+    font-size: 30px;
   }
 
+ h1 {
+   font-size: 20px;
+ }
 
-  .form__body .title h2 {
-    font-size: 26px;
-  }
+ h2 {
+   font-size: 30px;
+ }
 
-  .form__container {
-    width: 70%;
-    padding: 2rem 2.5rem;
-    border-radius: 12px;
-  }
+ p {
+   font-size: 12px;
+ }
 
 
-  input::placeholder,
-  input[type="date" i] {
-    font-size: 13px;
-  }
+ a {
+   font-size: 14px;
+ }
 
-  form .text__input input {
-    font-size: 13px;
-  }
-
-  form .text__input label,
-  form .radio__input label {
+  button {
     font-size: 9px;
+    padding: 0.5rem 1rem;
   }
 
-  form .text__input.flex,
-  form .radio__input.flex {
+
+
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff7eb;
+    z-index: 95;
+    padding: 0;
+    transform: translateX(-100%);
+    transition: 0.6s all ease-in-out;
+  }
+  .mobile-nav.active {
+    transform: translateX(0);
+  }
+
+  .mobile-nav ul {
     display: flex;
-    justify-content: space-between;
+      height: 100%;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .mobile-nav ul li {
+    display: block;
+    padding: 2rem;
+  }
+  .mobile-nav ul li a {
+    font-size: 32px;
   }
 
 
-  form .text__input.flex .text__contents,
-  form .radio__input.flex .text__contents {
-    width: 48%;
-    margin-bottom: 0;
+
+  .top-nav {
+    padding: 1rem 1rem;
   }
-}
 
-
-
-
-/* =============================================================================================================== */
-/* for desktop and laptops */
-@media (min-width: 992px) {
-  .form__container {
-    width: 40%;
+  .top-nav .logo img {
+    width: 47px;
   }
-}
+
+  .top-nav .left-nav ul:first-child li {
+    opacity: 1;
+  }
+
+  .top-nav .left-nav ul:first-child li span:hover {
+    cursor: pointer;
+  }
 
 
 
 
-/* =============================================================================================================== */
-/* for 4K tv */
-@media (min-width: 1500px) {
-  .form__container {
-    width: 25%;
+  main {
+    padding: 0;
+  }
+
+
+  .wrapper {
+    padding: 1rem;
+  }
+
+
+  header {
+    height: 55vh;
+  }
+
+  header .hero-text p {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+
+  header .hero-text h1 {
+    margin-bottom: 35px;
+  }
+
+
+
+  .footer-main {
+    height: auto;
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+
+  .footer-main div {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-main div h5 {
+    margin-bottom: 4px;
   }
 }
