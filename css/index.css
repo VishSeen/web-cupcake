@@ -37,7 +37,7 @@
 	height: 100%;
 	object-fit: cover;
 	z-index: 1;
-		transition: 4s all ease;
+	transition: 4s all ease;
 }
 
 .hero-background .hero-video video {
@@ -86,6 +86,12 @@
 
 
 /* SECTION CONTENTS */
+.left-content,
+.right-content {
+	width: 45%;
+}
+
+
 .sect-about {
 	display: flex;
 	justify-content: space-between;
@@ -99,6 +105,7 @@
 	width: 70%;
 	margin-left: 11rem;
 }
+
 .sect-about .paragraph h3 {
 	margin-bottom: 0.5rem;
 }
@@ -107,10 +114,12 @@
 	display: flex;
 	justify-content: flex-end;
 }
+
 .sect-about .right-content .image {
 	height: 40rem;
 	width: 30rem;
 }
+
 .sect-about .right-content .image img {
 	width: 100%;
 	height: 100%;
@@ -127,50 +136,62 @@
 }
 
 .sect-products .paragraph {
-	width: 45%;
 	text-align: center;
-  margin-bottom: 50px;
+	margin-bottom: 75px;
 }
 
 .sect-products .card-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
 }
+
 .sect-products .card-container .card {
-  height: 365px;
-  width: 15%;
-  margin: 0 15px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
+	height: 324px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ffffff;
 }
+
 .sect-products .card-container .card .image {
-  height: 60%;
-  width: 100%
+	height: 60%;
+	width: 100%
 }
+
 .sect-products .card-container .card .image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .sect-products .card-container .card .text {
-  height: 40%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.sect-products .card-container .card .text p {
-  margin-bottom: 16px;
+	height: 40%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
+.sect-products .card-container .card .text h3 {
+	font-size: 16px;
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+}
+
+.sect-products .card-container .card .text p {
+	margin-bottom: 16px;
+}
+
+.sect-products .card-container .card .text button {
+	font-size: 10px;
+	padding: 0.5rem 1rem;
+}
 
 
 
@@ -189,6 +210,7 @@
 	justify-content: flex-end;
 	width: unset;
 }
+
 .sect-gallery .right-content a {
 	font-size: 20px;
 	color: #F7C463;
@@ -206,10 +228,111 @@
 }
 
 .sect-contact .paragraph {
-	width: 45%;
 	text-align: center;
 	margin-bottom: 2rem;
 }
 
 
+.swiper {
+	width: 100%;
+	height: 100%;
+}
 
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper-slide {
+	width: 17% !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #F7C463 !important;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+	position: relative;
+	top: 2rem;
+}
+
+
+
+
+/* =============================================================================================================== */
+/* for mobile and Down */
+@media (max-width: 446px) {
+
+	.left-content,
+	.right-content {
+		width: 100%;
+	}
+
+	.left-content {
+		margin-bottom: 2rem;
+	}
+
+
+	.sect-about {
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	section .title {
+		flex-direction: column;
+	}
+
+	section .title.flex--row h2 {
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+
+	.sect-about .paragraph {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.sect-about .right-content .image {
+		height: 15rem;
+		width: 100%;
+	}
+
+
+	.sect-products .paragraph {
+		text-align: center;
+		margin-bottom: 45px;
+	}
+
+
+	.sect-gallery {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.swiper-slide {
+		width: 65% !important;
+	}
+}
