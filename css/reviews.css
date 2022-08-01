@@ -1,54 +1,60 @@
 /* SECTION CONTENTS */
 .left-content,
 .right-content {
-	width: 45%;
+  width: 45%;
 }
 
 
+.wrapper .paragraph {
+  text-align: center;
+  width: 65%;
+  margin: 1rem auto;
+}
+
 .sect-about {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sect-about .title {
-	margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .sect-about .paragraph {
-	width: 70%;
-	margin-left: 11rem;
+  width: 70%;
+  margin-left: 11rem;
 }
 
 .sect-about .paragraph h3 {
-	margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .sect-about .right-content {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sect-about .right-content .image {
-	height: 40rem;
-	width: 30rem;
+  height: 40rem;
+  width: 30rem;
 }
 
 
 .review-container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .review-card {
-	width: 30%;
-	height: 18rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: 1rem;
-	padding: 2rem 1rem;
-	background: #fff;
+  width: 30%;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  background: #fff;
 }
 
 
@@ -56,39 +62,44 @@
 /* =============================================================================================================== */
 /* for mobile and Down */
 @media (max-width: 446px) {
+  .wrapper .paragraph {
+    width: 100%;
+    margin: 2rem auto;
+  }
 
-	.left-content,
-	.right-content {
-		width: 100%;
-	}
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
 
-	.left-content {
-		margin-bottom: 2rem;
-	}
-
-
-	.sect-about {
-		flex-direction: column;
-		align-items: center;
-	}
+  .left-content {
+    margin-bottom: 2rem;
+  }
 
 
-	section .title {
-		flex-direction: column;
-	}
 
-	section .title.flex--row h2 {
-		margin: 0;
-		margin-bottom: 2rem;
-	}
+  .sect-about {
+    flex-direction: column;
+    align-items: center;
+  }
 
-	.sect-about .paragraph {
-		width: 100%;
-		margin-left: 0;
-	}
 
-	.sect-about .right-content .image {
-		height: 15rem;
-		width: 100%;
-	}
+  section .title {
+    flex-direction: column;
+  }
+
+  section .title.flex--row h2 {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .sect-about .paragraph {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sect-about .right-content .image {
+    height: 15rem;
+    width: 100%;
+  }
 }

@@ -15,6 +15,7 @@
 
 .sect-about .title {
 	margin-top: 0;
+  margin-bottom: 3rem;
 }
 
 .sect-about .paragraph {
@@ -95,6 +96,9 @@
 	section .title {
 		flex-direction: column;
 	}
+  .sect-about .title {
+  margin-bottom: 1rem;
+}
 
 	section .title.flex--row h2 {
 		margin: 0;
