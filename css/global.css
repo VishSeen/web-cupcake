@@ -25,7 +25,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -269,6 +271,27 @@ section .paragraph h3 {
 
 
 
+.btn-top {
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  width: 40px;
+  height: 40px;
+  padding: 1rem;
+  background-color: #F7C463;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: 0.2s all ease-in-out;
+}
+.btn-top:hover {
+  cursor: pointer;
+  background-color: #deac4f;
+}
 
 
 
@@ -311,6 +334,21 @@ section .paragraph h3 {
   font-size: 14px;
   font-weight: 400;
   font-family: 'EB Garamond', serif;
+}
+
+
+.footer-main .socials {
+  display: block;
+}
+.footer-main .socials ul {
+  display: inline-block;
+}
+.footer-main .socials ul li {
+  display: contents;
+  margin-right: 1rem;
+}
+.footer-main .socials ul li a img{
+  width: 8%;
 }
 
 
@@ -359,6 +397,7 @@ section .paragraph h3 {
 }
 
 .btn a {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -540,6 +579,13 @@ li.active a {
     margin-bottom: 35px;
   }
 
+
+    .btn-top {
+      right: 1rem;
+      bottom: 1rem;
+      width: 40px;
+      height: 40px;
+    }
 
 
   .footer-main {
