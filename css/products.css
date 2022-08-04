@@ -34,10 +34,23 @@
 }
 
 
+.category {
+	margin-bottom: 3rem;
+}
+
+.category .cat-text {
+	margin-bottom: 2rem;
+}
+.category .cat-text h2 {
+	font-size: 40px;
+}
 
 /* =============================================================================================================== */
 /* for mobile and Down */
 @media (max-width: 446px) {
+	main {
+		margin-top: 5rem;
+	}
 
 	.left-content,
 	.right-content {
@@ -73,4 +86,8 @@
 		height: 15rem;
 		width: 100%;
 	}
+
+		.category .cat-text h2 {
+			font-size: 25px;
+		}
 }
