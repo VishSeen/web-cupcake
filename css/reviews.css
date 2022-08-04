@@ -52,9 +52,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+	text-align: center;
   margin: 1rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
   background: #fff;
+  transition: 0.6s all ease;
+}
+.review-card:hover {
+	cursor: pointer;
+	background-color: #fafafa;
+}
+
+.review-card h5 {
+	font-size: 20px;
+}
+.review-card span {
+	font-size: 12px;
+		margin-bottom: 16px;
+}
+.review-card p {
+	font-size: 12px;
 }
 
 
@@ -101,5 +118,10 @@
   .sect-about .right-content .image {
     height: 15rem;
     width: 100%;
+  }
+
+
+  .review-card {
+  	width: 100%;
   }
 }

@@ -1,8 +1,5 @@
-let reviewCard = "<div class='review-card'></div>";
-let h3 = "<h3'></h3>";
-let span = "<span></span>";
-let p = "<p></p>";
-const reviewContainer = document.querySelector(".review-container");
+
+let reviewContainer = document.getElementsByClassName("review-container");
 
 
 const getReviews = async() => {
@@ -15,13 +12,14 @@ const populateReviews = async() => {
 	const data = await getReviews();
 
 	data.users.forEach(user => {
-		h3.innerHTML += user.name;
-		span.innerHTML += user.date;
-		p.innerHTML += user.review;
+		let title = document.createElement("h3");
+		title.innerHTML = user.name;
+		console.log(user.name);
 
-		reviewCard.innerHTML = h3;
+		let reviewCard = document.createElement("div");
+		reviewCard.classList.add("review-card");
 
-		reviewContainer.innerHTML = reviewCard;
+		reviewContainer.appendChild(reviewCard)
 	});
 }
 
