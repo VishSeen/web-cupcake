@@ -288,6 +288,7 @@ section .paragraph h3 {
   z-index: 99;
   transition: 0.2s all ease-in-out;
 }
+
 .btn-top:hover {
   cursor: pointer;
   background-color: #deac4f;
@@ -340,14 +341,17 @@ section .paragraph h3 {
 .footer-main .socials {
   display: block;
 }
+
 .footer-main .socials ul {
   display: inline-block;
 }
+
 .footer-main .socials ul li {
   display: contents;
   margin-right: 1rem;
 }
-.footer-main .socials ul li a img{
+
+.footer-main .socials ul li a img {
   width: 8%;
 }
 
@@ -439,7 +443,24 @@ li.active a {
 
 /* ===================================================== */
 
+.top-intro {
+  margin-top: 3rem;
+  text-align: center;
+}
 
+.top-intro h3 {
+  font-size: 24px;
+}
+
+.top-intro span {
+  font-size: 14px;
+}
+
+.top-intro p {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 
 
 
@@ -580,12 +601,12 @@ li.active a {
   }
 
 
-    .btn-top {
-      right: 1rem;
-      bottom: 1rem;
-      width: 40px;
-      height: 40px;
-    }
+  .btn-top {
+    right: 1rem;
+    bottom: 1rem;
+    width: 40px;
+    height: 40px;
+  }
 
 
   .footer-main {
@@ -602,4 +623,10 @@ li.active a {
   .footer-main div h5 {
     margin-bottom: 4px;
   }
+
+    .top-intro p {
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
 }
